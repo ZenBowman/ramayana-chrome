@@ -12,9 +12,11 @@ var groundHeight = 64;
 var platforms;
 var player;
 var ground;
+var video;
 var playerState = PlayerState.Idle;
 
-var game = new Phaser.Game(gameWidth, gameHeight, Phaser.AUTO, '',
+var game = new Phaser.Game(gameWidth, gameHeight, Phaser.AUTO, 
+			   'phaser',
 			   {
 			       preload: preload,
 			       create: create,
@@ -99,11 +101,11 @@ function update() {
 
 
 function getCamera() {
+    video = document.querySelector('video');
     navigator.webkitGetUserMedia(
 	{audio: true, video: true}, 
 	function(stream) {
-	    document.querySelector('video').src = 
-		webkitURL.createObjectURL(stream);
+	    video.src = webkitURL.createObjectURL(stream);
 	}, function(e) {
 	    console.error(e);
 	});

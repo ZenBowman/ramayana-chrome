@@ -1,8 +1,8 @@
 function launch() {
     chrome.app.window.create('ramayana.html', {
 	'bounds' : {
-	    'width' : 800,
-	    'height' : 800
+	    'width' : 1200,
+	    'height' : 650
 	}
     });
 }

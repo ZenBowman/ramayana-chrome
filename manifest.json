@@ -1,0 +1,22 @@
+{
+    "name" : "Ramayana",
+    "description" : "A game based on the Indian epic Ramayana",
+    "version" : "0.1",
+    "manifest_version": 2,
+
+    "app" : {
+	"background" : {
+	    "scripts" : ["ramayana.background.js"]
+	}
+    },
+
+    "icons" : {
+	"16" : "ramayana-16.png",
+	"128" : "ramayana-128.png"
+    },
+
+    "permissions": [
+	"audioCapture",
+	"videoCapture"
+    ]
+}
